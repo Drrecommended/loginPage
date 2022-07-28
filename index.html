@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <div class="banner">
@@ -16,50 +17,54 @@
       </p>
     </div>
     <div class="form-container">
-      <p>
-        This is not a real online service! You know you need something 
-        like this in your real life to help realize your deepest dreams. 
-        Sign up
-        <em>now</em> to get started.
-      </p>
-      <p>You <em>know</em> you want to.</p>
-      <form action="POST">
+      <div class="form-header">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your real life to help realize your deepest dreams. Sign up
+          <em>now</em> to get started.
+        </p>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <form id="form" action="POST">
         <h1>Let's do this!</h1>
         <div class="flex">
           <div>
             <label for="firstName">FIRST NAME</label>
-            <input type="text" id="firstName" />
+            <input type="text" id="firstName" required/>
           </div>
           <div>
             <label for="lastName">LAST NAME</label>
-            <input type="text" id="lastName" />
+            <input type="text" id="lastName" required/>
           </div>
         </div>
         <div class="flex">
           <div>
             <label for="email">EMAIL</label>
-            <input type="email" id="email" />
+            <input type="email" id="email" required/>
           </div>
           <div>
             <label for="phoneNumber">PHONE NUMBER</label>
-            <input type="tel" id="phoneNumber" />
+            <input type="tel" id="phoneNumber" required/>
           </div>
         </div>
         <div class="flex">
           <div>
-            <label for="">PASSWORD</label>
-            <input type="password" />
+            <label for="password">PASSWORD</label>
+            <input id="password" type="password" required/>
+            <p class="error_message">*Passwords do not match</p>
           </div>
           <div>
-            <label for="">CONFIRM PASSWORD</label>
-            <input type="password" />
+            <label for="passwordConfirm" for="">CONFIRM PASSWORD</label>
+            <input id="passwordConfirm" required/>
           </div>
         </div>
-        <div class="login-signup">
-          <button type="submit">Create Account</button>
-          <p>Already have an account <a href="">Log in</a></p>
-        </div>
       </form>
+      <div class="login-signup">
+        <input id="signupBtn" type="submit" form="form" value="Create Account"/>
+        <p>Already have an account <a href="">Log in</a></p>
+      </div>
     </div>
   </body>
 </html>
+
+

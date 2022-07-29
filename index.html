@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="banner">
-      <div class="logo">LOGO</div>
+      <div class="logo"><h1>*YOUR LOGO*</h1></div>
       <p class="pic-credit">
         Photo by <a href="https://unsplash.com/@visaxslr">Visax</a> on
         <a href="https://unsplash.com">Unsplash</a>
@@ -25,46 +25,44 @@
         </p>
         <p>You <em>know</em> you want to.</p>
       </div>
-      <form id="form" action="POST">
-        <h1>Let's do this!</h1>
+      <form action="#" id="form">
+        <h2>Let's do this!</h2>
         <div class="flex">
           <div>
             <label for="firstName">FIRST NAME</label>
-            <input type="text" id="firstName" required/>
+            <input class="input" type="text" id="firstName" required/>
           </div>
           <div>
             <label for="lastName">LAST NAME</label>
-            <input type="text" id="lastName" required/>
+            <input class="input" type="text" id="lastName" required/>
           </div>
         </div>
         <div class="flex">
           <div>
             <label for="email">EMAIL</label>
-            <input type="email" id="email" required/>
+            <input class="input" type="email" id="email" required/>
           </div>
           <div>
             <label for="phoneNumber">PHONE NUMBER</label>
-            <input type="tel" id="phoneNumber" required/>
+            <input class="input" type="tel" id="phoneNumber" required/>
           </div>
         </div>
         <div class="flex">
           <div>
             <label for="password">PASSWORD</label>
-            <input id="password" type="password" required/>
-            <p class="error_message">*Passwords do not match</p>
+            <input class="input" id="password" type="password" required/>
           </div>
           <div>
-            <label for="passwordConfirm" for="">CONFIRM PASSWORD</label>
-            <input id="passwordConfirm" required/>
+            <label for="passwordConfirm">CONFIRM PASSWORD</label>
+            <input class="input" id="passwordConfirm" type="password" required/>
           </div>
         </div>
+        <p class="error_message">*Passwords do not match</p>
       </form>
       <div class="login-signup">
-        <input id="signupBtn" type="submit" form="form" value="Create Account"/>
+        <input id="signupBtn" type="submit" onclick="return checkInputs()" form="form" value="Create Account"/>
         <p>Already have an account <a href="">Log in</a></p>
       </div>
     </div>
   </body>
 </html>
-
-

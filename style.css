@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 :root {
   --banner: 4rem;
@@ -9,18 +10,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
 }
 
-html,
 body {
   height: 100vh;
 }
 
-main {
-    height: 100vh;
+h1 {
+  font-family: 'Bungee', cursive;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
 }
 
-h1 {
+.logo  {
+ background-color: rgba(46, 5, 52, 0.55);
+ margin-top: 20vh;
+}
+
+
+
+h2 {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
@@ -28,11 +40,8 @@ h1 {
 .banner {
   background: url("https://images.unsplash.com/photo-1656972805718-c9817f16c9c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=696&q=80");
   width: 100%;
-  background-size: auto 100vh;
   background-size: cover;
 }
-
-
 
 body {
   display: flex;
@@ -40,7 +49,6 @@ body {
 
 .form-container {
   width: 60%;
-  height: 100vh;
   margin-left: auto;
   background-color: #f9fafb;
 }
@@ -75,7 +83,7 @@ form {
   margin-bottom: 1.5em;
 }
 
-input {
+.input {
   width: 200px;
   border: 1px solid lightgrey;
   border-radius: 2px;
@@ -103,11 +111,17 @@ input:focus {
 .flex {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 450px;
 }
 
 .flex > div:nth-child(even) {
-  margin-left: 3em;
+  margin-left: clamp(5px, 7%, 100px);
 }
+
+
+
+
 
 form label {
   display: block;
@@ -116,18 +130,17 @@ form label {
   font-size: 0.7rem;
 }
 
-form input {
+form .input {
   margin-bottom: 1.4em;
 }
 
-.error_message {
-    font-size: .7rem;
-    color: red;
-    display: none;
-}
 
-#password {
-    margin-bottom: 0;
+.error_message {
+  font-size: 0.7rem;
+  color: red;
+  display: none;
+  position: absolute;
+  margin-bottom: 10px;
 }
 
 .login-signup {
@@ -141,15 +154,16 @@ form input {
 
 .pic-credit {
   position: absolute;
+  color: white;
   bottom: 3px;
-  width: 100%;
+  left: 15%;
 }
 
-@media only screen and (max-width: 709px) {
+@media only screen and (max-width: 992px) {
   .flex > div:nth-child(even) {
     margin-left: 0em;
   }
-  .flex {
+  .flex div {
     display: block;
   }
 }

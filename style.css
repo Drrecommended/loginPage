@@ -10,8 +10,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #0f0 !important;
-  outline: solid #f00 1px !important;
+  /* color: #0f0 !important;
+  outline: solid #f00 1px !important; */
 }
 
 body {
@@ -34,7 +34,7 @@ h1 {
 
 h2 {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .banner {
@@ -150,13 +150,15 @@ form .input {
 
 .banner {
   max-width: 50%;
+  position: relative;
 }
 
 .pic-credit {
-  position: absolute;
+  bottom: 0;
+  width: 100%;
   color: white;
-  bottom: 3px;
-  left: 15%;
+  position: absolute;
+  text-align: center;
 }
 
 @media only screen and (max-width: 992px) {
@@ -165,5 +167,14 @@ form .input {
   }
   .flex div {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .banner {
+    display: none;
+  }
+  .form-container {
+    width: 100%;
   }
 }
